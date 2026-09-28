@@ -4,15 +4,61 @@
     <title>Document</title>
 </head>
 <style>
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 30px 15px;
+        background-color: #f5f5f5;
+    }
 
+    h1 {
+        margin-bottom: 25px;
+    }
+    #img {
+        width: 400px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    #button {
+        height: 35px;
+        width: 80px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+    }
+
+    #button:hover {
+        background-color: #555;
+    }
+
+    @media (max-width: 500px) {
+        body {
+            padding-top: 20px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        #img {
+            width: 280px;
+        }
+    }
 </style>
+
 <body>
+    <div>
+
     <h1>Dice Roller</h1>
     <img src="./dice1.png" alt="dice" height="400px" id="img">
     <br>
     <br/>
     <button style="height: 30px; width: 70px; font-size: medium;" id="button" onclick="diceRoll()">Roll</button>
 
+    </div>
     <script>
         const dice = document.getElementById("button");
         const image = document.getElementById("img");
